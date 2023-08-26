@@ -1,6 +1,5 @@
 # My-Love-Planet
-# Guten Tag, hier ein Test Push/Pull #
-# Hallo #
-
-# change ....
+# Guten Tag, hier ein Test Push/Pull 
+# Hallo 
+# change
 # test

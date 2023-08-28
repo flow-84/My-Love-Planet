@@ -3,6 +3,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styles from "./LandingPage2.module.css";
+
+/*
+import { useCallback, useEffect } from "react";
+Hier werden die Hooks useCallback und useEffect aus der React-Bibliothek importiert. Diese Hooks werden verwendet, um Funktionen und Side-Effects in React-Komponenten zu verwalten.
+
+import "bootstrap/dist/css/bootstrap.min.css";
+Hier wird das Bootstrap-CSS-Framework in das Projekt eingebunden, um ein vorgefertigtes Design und Layout für die Komponenten zu nutzen.
+
+
+import { Form } from "react-bootstrap";
+Hier wird die Form-Komponente aus dem react-bootstrap-Paket importiert. Diese Komponente ermöglicht es, Formularelemente im Bootstrap-Stil zu erstellen.
+
+import { useNavigate } from "react-router-dom";
+Hier wird die useNavigate-Funktion aus dem react-router-dom-Paket importiert. Diese Funktion wird normalerweise verwendet, um in React-Anwendungen zwischen verschiedenen Seiten zu navigieren, die durch die React Router Library verwaltet werden.
+
+import styles from "./LandingPage2.module.css";
+Hier wird ein CSS-Modul namens LandingPage2.module.css importiert. CSS-Module sind eine Methode, um CSS-Dateien in React-Komponenten zu verwenden, wodurch Klassen und Styles lokal abgegrenzt werden können.
+
+*/
+
+
 const LandingPage2 = () => {
   const navigate = useNavigate();
 

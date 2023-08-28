@@ -1,16 +1,10 @@
 import { useCallback, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button as MuiButton } from "@mui/material";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import styles from "./LandingPage2.module.css";
-const LandingPage2 = () => {
+import styles from "./LandingPage4.module.css";
+const LandingPage4 = () => {
   const navigate = useNavigate();
-
-  const onRectangleOrderedListClick = useCallback(() => {
-    navigate("/landing-page-3");
-  }, [navigate]);
-
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -41,13 +35,16 @@ const LandingPage2 = () => {
     };
   }, []);
 
+  const onRectangleOrderedList1Click = useCallback(() => {
+    navigate("/landing-page-3");
+  }, [navigate]);
+
+  const onLissabonStadtnameStadtnameClick = useCallback(() => {
+    navigate("/landing-page-3");
+  }, [navigate]);
+
   return (
-    <div className={styles.landingPage2}>
-      <div className={styles.landingPage2Child} />
-      <ol
-        className={styles.landingPage2Item}
-        onClick={onRectangleOrderedListClick}
-      />
+    <div className={styles.landingPage4}>
       <div className={styles.footer}>
         <div className={styles.footer1}>
           <div className={styles.frame}>
@@ -77,18 +74,17 @@ const LandingPage2 = () => {
       <div className={styles.welcheStadtHast}>
         Welche Stadt hast du schon besucht?
       </div>
-      <MuiButton
-        className={styles.landingPage2Inner}
-        sx={{ width: 79 }}
-        variant="contained"
-        color="primary"
-      >
-        Add
-      </MuiButton>
       <Form.Group className={styles.wrapper}>
         <Form.Control type="text" placeholder="Stadt hinzufügen..." />
       </Form.Group>
+      <ol className={styles.landingPage4Child} data-animate-on-scroll />
+      <div className={styles.openstreetmap}>Openstreetmap</div>
       <div className={styles.besuchteStdte}>Besuchte Städte</div>
+      <ol
+        className={styles.landingPage4Item}
+        onClick={onRectangleOrderedList1Click}
+      />
+      <div className={styles.landingPage4Inner} />
       <div className={styles.header}>
         <div className={styles.frame5}>
           <div className={styles.frame6}>
@@ -109,30 +105,43 @@ const LandingPage2 = () => {
               alt=""
               src="/dreamshaper-v7-white-background-travel-comic-look-earth-0-1@2x.png"
             />
-            <div className={styles.title}>
-              <p className={styles.erweckeDeineAbenteuer}>
-                "Erwecke deine Abenteuer zum Leben: Die Reisehelden-Chroniken –
-                Orte, Erinnerungen und Geschichten"
-              </p>
-              <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
-              <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
-              <p className={styles.dieKartographieDeiner}>
-                "Die Kartographie deiner Abenteuer: Orte, Erinnerungen,
-                unendliche Möglichkeiten"
-              </p>
+            <div className={styles.frame9}>
+              <div className={styles.title}>
+                <p className={styles.erweckeDeineAbenteuer}>
+                  "Erwecke deine Abenteuer zum Leben: Die Reisehelden-Chroniken
+                  – Orte, Erinnerungen und Geschichten"
+                </p>
+                <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
+                <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
+                <p className={styles.dieKartographieDeiner}>
+                  "Die Kartographie deiner Abenteuer: Orte, Erinnerungen,
+                  unendliche Möglichkeiten"
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={styles.lissabonStadtname}>
-        <ul className={styles.lissabonStadtname1}>
+      <div
+        className={styles.lissabonStadtnameStadtnameContainer}
+        onClick={onLissabonStadtnameStadtnameClick}
+      >
+        <ul className={styles.lissabonStadtnameStadtnameS}>
           <li className={styles.lissabon}>Lissabon</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
+          <li className={styles.lissabon}>Stadtname</li>
           <li className={styles.lissabon}>Stadtname</li>
         </ul>
       </div>
-      <ol className={styles.rectangleOl} data-animate-on-scroll />
     </div>
   );
 };
 
-export default LandingPage2;
+export default LandingPage4;

@@ -4,8 +4,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import LandingPage3 from "./pages/LandingPage3";
 import LandingPage2 from "./pages/LandingPage2";
+import LandingPage3 from "./pages/LandingPage3";
+import LandingPage4 from "./pages/LandingPage4";
 import { useEffect } from "react";
 
 function App() {
@@ -28,7 +29,11 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/landing-page-2":
+      case "/landing-page-3":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/landing-page-4":
         title = "";
         metaDescription = "";
         break;
@@ -50,8 +55,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage3 />} />
-      <Route path="/landing-page-2" element={<LandingPage2 />} />
+      <Route path="/" element={<LandingPage2 />} />
+      <Route path="/landing-page-3" element={<LandingPage3 />} />
+      <Route path="/landing-page-4" element={<LandingPage4 />} />
     </Routes>
   );
 }

@@ -1,47 +1,58 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-import React, { useState, useEffect } from 'react';
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import LandingPage3 from "./pages/LandingPage3";
+import LandingPage2 from "./pages/LandingPage2";
+import { useEffect } from "react";
 
 function App() {
-  const [nachricht, setNachricht] = useState('');
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/nachricht')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-        setNachricht(json.nachricht);
-      });
-  }, []);
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/landing-page-2":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
 
   return (
-    <div>
-      <h1>{nachricht}</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage3 />} />
+      <Route path="/landing-page-2" element={<LandingPage2 />} />
+    </Routes>
   );
 }
-
 export default App;

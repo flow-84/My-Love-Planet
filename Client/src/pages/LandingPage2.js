@@ -1,9 +1,11 @@
 import { useCallback, useEffect } from "react";
+import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button as MuiButton } from "@mui/material";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styles from "./LandingPage2.module.css";
+
 const LandingPage2 = () => {
   const navigate = useNavigate();
 
@@ -11,10 +13,17 @@ const LandingPage2 = () => {
     navigate("/landing-page-3");
   }, [navigate]);
 
+  const addCity = async (city) => {
+    try {
+      const response = await axios.post('http://localhost:8080/api/addCity', { city });
+      console.log(response.data.message);
+    } catch (error) {
+      console.error('Fehler beim Hinzufügen der Stadt:', error);
+    }
+  };
+
   useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
-    );
+    const scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -44,10 +53,7 @@ const LandingPage2 = () => {
   return (
     <div className={styles.landingPage2}>
       <div className={styles.landingPage2Child} />
-      <ol
-        className={styles.landingPage2Item}
-        onClick={onRectangleOrderedListClick}
-      />
+      <ol className={styles.landingPage2Item} onClick={onRectangleOrderedListClick} />
       <div className={styles.footer}>
         <div className={styles.footer1}>
           <div className={styles.frame}>
@@ -62,11 +68,7 @@ const LandingPage2 = () => {
                   <div className={styles.home}>About</div>
                   <div className={styles.home}>Contact</div>
                 </div>
-                <img
-                  className={styles.iconsocialinstagramCopy4}
-                  alt=""
-                  src="/iconsocialinstagram-copy-4.svg"
-                />
+                <img className={styles.iconsocialinstagramCopy4} alt="" src="/iconsocialinstagram-copy-4.svg" />
               </div>
               <img className={styles.frameIcon} alt="" src="/frame.svg" />
             </div>
@@ -82,6 +84,7 @@ const LandingPage2 = () => {
         sx={{ width: 79 }}
         variant="contained"
         color="primary"
+        onClick={() => addCity('Berlin')}
       >
         Add
       </MuiButton>
@@ -104,21 +107,13 @@ const LandingPage2 = () => {
             </div>
           </div>
           <div className={styles.frame8}>
-            <img
-              className={styles.dreamshaperV7WhiteBackgrounIcon}
-              alt=""
-              src="/dreamshaper-v7-white-background-travel-comic-look-earth-0-1@2x.png"
-            />
+            <img className={styles.dreamshaperV7WhiteBackgrounIcon} alt="" src="/dreamshaper-v7-white-background-travel-comic-look-earth-0-1@2x.png" />
             <div className={styles.title}>
               <p className={styles.erweckeDeineAbenteuer}>
-                "Erwecke deine Abenteuer zum Leben: Die Reisehelden-Chroniken –
-                Orte, Erinnerungen und Geschichten"
+                "Erwecke deine Abenteuer zum Leben: Die Reisehelden-Chroniken – Orte, Erinnerungen und Geschichten"
               </p>
-              <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
-              <p className={styles.erweckeDeineAbenteuer}>&nbsp;</p>
               <p className={styles.dieKartographieDeiner}>
-                "Die Kartographie deiner Abenteuer: Orte, Erinnerungen,
-                unendliche Möglichkeiten"
+                "Die Kartographie deiner Abenteuer: Orte, Erinnerungen, unendliche Möglichkeiten"
               </p>
             </div>
           </div>

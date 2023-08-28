@@ -1,0 +1,332 @@
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.landingPage2Child {
+  position: absolute;
+  top: 1157px;
+  left: 0;
+  background-color: var(--color-whitesmoke);
+  width: 1440px;
+  height: 1004px;
+}
+.about,
+.contact,
+.home {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 0;
+  line-height: 24px;
+}
+.about,
+.contact {
+  left: 33.06%;
+}
+.contact {
+  left: 66.12%;
+}
+.frame3 {
+  position: absolute;
+  margin: 0 !important;
+  top: 22px;
+  left: 62px;
+  width: 245px;
+  height: 24px;
+  z-index: 0;
+}
+.nav {
+  width: 1440px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-146xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.landie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 38px;
+  font-weight: 900;
+}
+.logolandie {
+  position: relative;
+  width: 79px;
+  height: 38px;
+  margin-top: -48px;
+  font-size: var(--bold-26-size);
+  color: var(--colour-logo-primary);
+}
+.frame2 {
+  width: 1440px;
+  height: 93px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.dreamshaperV7WhiteBackgrounIcon {
+  position: relative;
+  width: 597px;
+  height: 799px;
+  object-fit: cover;
+}
+.erweckeDeineAbenteuer {
+  margin-block-start: 0;
+  margin-block-end: 12px;
+}
+.dieKartographieDeiner {
+  margin: 0;
+}
+.title {
+  position: undefined;
+  line-height: 48px;
+  font-weight: 500;
+  display: inline-block;
+  width: 621px;
+  margin-bottom: 153px;
+}
+.frame,
+.frame1,
+.frame4 {
+  overflow: hidden;
+  display: flex;
+}
+.frame4 {
+  width: 1300px;
+  height: 799px;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-144xl);
+  font-size: var(--medium-36-size);
+  color: var(--colour-main-blue-900);
+}
+.frame,
+.frame1 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame1 {
+  width: 1444px;
+  height: 1025px;
+  flex-shrink: 0;
+  padding: 0 var(--padding-9xs);
+  box-sizing: border-box;
+  justify-content: flex-start;
+  gap: var(--gap-26xl);
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 1448px;
+  justify-content: center;
+  color: var(--colour-main-blue-500);
+}
+.div {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.frame6 {
+  width: 1110px;
+  height: 26px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle {
+  position: relative;
+  background-color: var(--color-lightgray);
+  width: 1110px;
+  height: 1px;
+}
+.home1 {
+  position: relative;
+  line-height: 24px;
+}
+.frame10 {
+  width: 245px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+}
+.iconsocialinstagramCopy4 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.frame9 {
+  width: 926px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-646xl);
+}
+.frame8,
+.frame9,
+.frameIcon {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frameIcon {
+  position: relative;
+  width: 154px;
+  height: 16px;
+}
+.frame8 {
+  width: 1110px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.footer,
+.frame7 {
+  display: flex;
+  flex-direction: column;
+}
+.frame7 {
+  width: 1110px;
+  height: 45px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  color: var(--colour-background-light-grey);
+}
+.footer {
+  background-color: var(--color-lavender);
+  width: 1440px;
+  height: 216px;
+  padding: var(--padding-48xl) var(--padding-146xl) var(--padding-13xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--gap-27xl);
+}
+.logolandie1 {
+  position: relative;
+  width: 79px;
+  height: 38px;
+  margin-top: -155px;
+}
+.frame5 {
+  position: absolute;
+  top: 2625px;
+  left: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--colour-main-grey-400);
+}
+.welcheStadtHast {
+  position: absolute;
+  top: 1001px;
+  left: 490px;
+  font-size: var(--font-size-11xl);
+  line-height: 24px;
+  font-weight: 500;
+}
+.wrapper {
+  width: 600px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 1042px;
+  left: 450px;
+}
+.landingPage2Item {
+  margin: 0;
+  position: absolute;
+  top: 1216px;
+  left: 75px;
+  cursor: pointer;
+}
+.landingPage2Inner {
+  margin: 0;
+  position: absolute;
+  top: 1216px;
+  left: 438px;
+  border-radius: var(--br-xl);
+  background-color: var(--colour-secondary-white-100-general);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+  width: 948px;
+  height: 874px;
+  opacity: 1;
+}
+.landingPage2Inner.animate {
+  animation: 1s ease 0s 1 normal forwards scale-up;
+}
+.besuchteStdte,
+.openstreetmap {
+  position: absolute;
+  top: 1641px;
+  left: 826px;
+  font-size: var(--font-size-5xl);
+  line-height: 24px;
+  font-weight: 500;
+}
+.besuchteStdte {
+  top: 1269px;
+  left: 134px;
+  font-size: var(--font-size-11xl);
+  text-align: center;
+}
+.lissabon {
+  margin-bottom: 22px;
+}
+.lissabonStadtnameStadtnameS {
+  margin: 0;
+  padding-left: var(--padding-21xl);
+}
+.lissabonStadtnameStadtnameContainer {
+  position: absolute;
+  top: 1341px;
+  left: 132px;
+  font-size: var(--font-inherit);
+  line-height: 24px;
+  font-weight: 300;
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 221px;
+  height: 702px;
+  cursor: pointer;
+}
+.landingPage2 {
+  position: relative;
+  background-color: var(--color-whitesmoke);
+  width: 100%;
+  height: 2841px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--regular-14-size);
+  color: var(--color-black);
+  font-family: var(--regular-14);
+}

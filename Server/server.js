@@ -36,9 +36,6 @@ const Location = mongoose.model('Location', LocationSchema);
 // API Routes
 app.use('/api', apiRoutes);  // Fügen Sie die API-Routen nur einmal hinzu
 
-// Weitere API Endpunkte können hier hinzugefügt werden
-// ...
-
 // Static File Handling for React
 app.use(express.static(path.join(__dirname, '../Client/build')));
 

@@ -1,25 +1,30 @@
-
 const express = require('express');
 const cors = require('cors');
-const api = require('./routes/api');
+const path = require('path');
+const apiRoutes = require('./routes/api');  // Importieren Sie die API-Routen nur einmal
+
 const app = express();
-const port = 8080; app.use(cors()); 
+const port = 8080;
 
+// CORS Middleware
+app.use(cors());
 
-app.use('/api', api);
+// Body Parser Middleware (für POST-Anfragen)
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+// API Routes
+app.use('/api', apiRoutes);  // Fügen Sie die API-Routen nur einmal hinzu
 
-/*
-app.get('/'): 
-Hier wird eine HTTP-GET-Anfrage auf der Wurzelroute ("/") definiert. 
-Das bedeutet, dass, wenn jemand die Haupt-URL der Website besucht (z.B. http://www.example.com/), dieser Codeblock ausgeführt wird.
-*/
+// Static File Handling for React
+app.use(express.static(path.join(__dirname, '../Client/build')));
 
-app.get('/', (req, res) => {
-res.send('Hello von Express');
+// Catch-All for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../Client/build', 'index.html'));
 });
 
-
+// Start Server
 app.listen(port, () => {
-console.log(`Server läuft auf Port ${port}`);
+  console.log(`Server läuft auf Port ${port}`);
 });

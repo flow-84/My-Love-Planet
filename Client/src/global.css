@@ -18,14 +18,12 @@ body {
   --bold-26-size: 26px;
 
   /* Colors */
-  --color-whitesmoke: #f5f5f5;
+  --color-whitesmoke-100: #f5f5f5;
   --color-black: #000;
-  --colour-secondary-white-100-general: #fff;
-  --color-lavender: #e7ecff;
-  --colour-main-blue-300: #929ecc;
-  --color-lightgray: #cdd1d4;
+  --color-white: #fff;
+  --colour-main-grey-700: #454e54;
+  --color-lightgray-100: #cdd1d4;
   --colour-main-grey-400: #939ea4;
-  --colour-background-light-grey: #fbfbfd;
   --colour-main-blue-900: #091133;
   --colour-logo-primary: #37447e;
   --colour-main-blue-500: #505f98;

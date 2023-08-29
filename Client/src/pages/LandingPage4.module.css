@@ -6,21 +6,6 @@
     transform: scale(1);
   }
 }
-.landingPage2Child {
-  position: absolute;
-  top: 1157px;
-  left: 0;
-  background-color: var(--color-whitesmoke-100);
-  width: 1440px;
-  height: 1004px;
-}
-.landingPage2Item {
-  margin: 0;
-  position: absolute;
-  top: 1216px;
-  left: 75px;
-  cursor: pointer;
-}
 .div {
   position: relative;
   line-height: 24px;
@@ -141,27 +126,58 @@
   line-height: 24px;
   font-weight: 500;
 }
-.landingPage2Inner,
-.wrapper {
-  position: absolute;
-  top: 1046px;
-  left: 1069px;
-}
 .wrapper {
   width: 600px;
   border: 0;
   background-color: transparent;
+  position: absolute;
   top: 1042px;
   left: 450px;
 }
-.besuchteStdte {
+.landingPage4Child {
+  margin: 0;
   position: absolute;
+  top: 1216px;
+  left: 438px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+  width: 948px;
+  height: 874px;
+  opacity: 1;
+}
+.landingPage4Child.animate {
+  animation: 1s ease 0s 1 normal forwards scale-up;
+}
+.besuchteStdte,
+.openstreetmap {
+  position: absolute;
+  top: 1641px;
+  left: 826px;
+  font-size: var(--font-size-5xl);
+  line-height: 24px;
+  font-weight: 500;
+}
+.besuchteStdte {
   top: 1269px;
   left: 134px;
   font-size: var(--font-size-11xl);
-  line-height: 24px;
-  font-weight: 500;
   text-align: center;
+}
+.landingPage4Item {
+  margin: 0;
+  position: absolute;
+  top: 1216px;
+  left: 75px;
+  cursor: pointer;
+}
+.landingPage4Inner {
+  position: absolute;
+  top: 1157px;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  width: 1440px;
+  height: 1004px;
 }
 .about1,
 .contact1,
@@ -237,15 +253,23 @@
   margin: 0;
 }
 .title {
-  position: undefined;
+  position: relative;
   line-height: 48px;
   font-weight: 500;
   display: inline-block;
-  width: 621px;
-  margin-bottom: 153px;
+  width: 540px;
+}
+.frame9 {
+  width: 540px;
+  height: 621px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .frame5,
 .frame8,
+.frame9,
 .header {
   overflow: hidden;
   display: flex;
@@ -286,11 +310,11 @@
 .lissabon {
   margin-bottom: 22px;
 }
-.lissabonStadtname1 {
+.lissabonStadtnameStadtnameS {
   margin: 0;
   padding-left: var(--padding-21xl);
 }
-.lissabonStadtname {
+.lissabonStadtnameStadtnameContainer {
   position: absolute;
   top: 1341px;
   left: 132px;
@@ -301,23 +325,9 @@
   display: inline-block;
   width: 221px;
   height: 702px;
+  cursor: pointer;
 }
-.rectangleOl {
-  margin: 0;
-  position: absolute;
-  top: 1216px;
-  left: 438px;
-  border-radius: var(--br-xl);
-  background-color: #c6cdd0;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
-  width: 948px;
-  height: 874px;
-  opacity: 1;
-}
-.rectangleOl.animate {
-  animation: 1s ease 0s 1 normal forwards scale-up;
-}
-.landingPage2 {
+.landingPage4 {
   position: relative;
   background-color: var(--color-whitesmoke-100);
   width: 100%;

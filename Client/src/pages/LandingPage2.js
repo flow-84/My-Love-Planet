@@ -1,52 +1,50 @@
-import { useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button as MuiButton } from "@mui/material";
-import { Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import styles from "./LandingPage2.module.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button as MuiButton } from '@mui/material';
+import { Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import styles from './LandingPage2.module.css';
 
 const LandingPage2 = () => {
+  const [city, setCity] = useState('');
   const navigate = useNavigate();
 
+  const handleCityChange = (e) => {
+    setCity(e.target.value);
+  };
+
   const onRectangleOrderedListClick = useCallback(() => {
-    navigate("/landing-page-3");
+    navigate('/landing-page-3');
   }, [navigate]);
 
-  const addCity = async (city) => {
+  const addCityToServer = useCallback(async () => {
     try {
       const response = await axios.post('http://localhost:8080/api/addCity', { city });
       console.log(response.data.message);
     } catch (error) {
-      console.error('Fehler beim Hinzufügen der Stadt:', error);
+      console.error(`Fehler beim Hinzufügen der Stadt: ${error}`);
     }
-  };
+  }, [city]);
 
   useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+    const scrollAnimElements = document.querySelectorAll('[data-animate-on-scroll]');
     const observer = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
+        entries.forEach((entry) => {
           if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add(styles.animate);
-            observer.unobserve(targetElement);
+            entry.target.classList.add(styles.animate);
+            observer.unobserve(entry.target);
           }
-        }
+        });
       },
-      {
-        threshold: 0.15,
-      }
+      { threshold: 0.15 }
     );
 
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
-    }
+    scrollAnimElements.forEach((element) => observer.observe(element));
 
     return () => {
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.unobserve(scrollAnimElements[i]);
-      }
+      scrollAnimElements.forEach((element) => observer.unobserve(element));
     };
   }, []);
 
@@ -79,18 +77,23 @@ const LandingPage2 = () => {
       <div className={styles.welcheStadtHast}>
         Welche Stadt hast du schon besucht?
       </div>
+      <Form.Group className={styles.wrapper}>
+        <Form.Control
+          type="text"
+          placeholder="Stadt hinzufügen..."
+          value={city}
+          onChange={handleCityChange}
+        />
+      </Form.Group>
       <MuiButton
         className={styles.landingPage2Inner}
         sx={{ width: 79 }}
         variant="contained"
         color="primary"
-        onClick={() => addCity('Berlin')}
+        onClick={addCityToServer}
       >
         Add
       </MuiButton>
-      <Form.Group className={styles.wrapper}>
-        <Form.Control type="text" placeholder="Stadt hinzufügen..." />
-      </Form.Group>
       <div className={styles.besuchteStdte}>Besuchte Städte</div>
       <div className={styles.header}>
         <div className={styles.frame5}>

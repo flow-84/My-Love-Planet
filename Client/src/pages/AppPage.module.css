@@ -1,0 +1,90 @@
+.appPageChild {
+  position: absolute;
+  top: 1460px;
+  left: 82px;
+  border-radius: 22px;
+  background-color: #f1eeee;
+  width: 1321px;
+  height: 832px;
+}
+.home {
+  cursor: pointer;
+}
+.about,
+.home {
+  position: relative;
+  line-height: 24px;
+}
+.frame,
+.logoname {
+  margin: 0;
+  position: absolute;
+}
+.frame {
+  top: 55px;
+  left: 62px;
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-24xl);
+  text-align: left;
+  font-size: var(--body-small-size);
+  color: var(--colour-main-blue-500);
+  font-family: var(--bold-26);
+}
+.logoname {
+  height: 1.34%;
+  width: 10.97%;
+  top: 1.94%;
+  left: 44.58%;
+  font-size: var(--bold-26-size);
+  line-height: 38px;
+  font-weight: 900;
+  font-family: inherit;
+  color: var(--colour-logo-primary1);
+  display: inline-block;
+}
+.nameDerStadt {
+  position: absolute;
+  top: 1480px;
+  left: 710px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.containerFrBilder {
+  position: absolute;
+  top: 1548px;
+  left: 670px;
+  width: 660px;
+  height: 393px;
+  object-fit: cover;
+}
+.welcheStadtHast {
+  position: absolute;
+  top: 51px;
+  left: 424px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.welcheStadtHastDuSchonBesParent {
+  position: absolute;
+  top: 155px;
+  left: 44px;
+  width: 1359px;
+  height: 215px;
+  overflow: hidden;
+}
+.appPage {
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  width: 100%;
+  height: 2606px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-black);
+  font-family: var(--bold-26);
+}

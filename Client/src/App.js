@@ -1,54 +1,60 @@
+// Importieren Sie alle erforderlichen Module
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
+import LandingPage2 from "./pages/LandingPage2";
+import LandingPage3 from "./pages/LandingPage3";
+import LandingPage4 from "./pages/LandingPage4";
 
 function App() {
   const [locations, setLocations] = useState([]);
   const [newLocation, setNewLocation] = useState({ name: '', lat: 0, lon: 0, notes: '', reminders: [] });
+  const { pathname } = useLocation();
 
+  // Erster useEffect für die Ortsverwaltung
   useEffect(() => {
     axios.get('http://localhost:8080/api/getLocations')
       .then(response => setLocations(response.data))
       .catch(error => console.error(error));
   }, []);
 
-  const addLocation = () => {
-    axios.post('http://localhost:8080/api/addLocation', newLocation)
-      .then(response => setLocations([...locations, response.data]))
-      .catch(error => console.error(error));
-  };
+  // Zweiter useEffect für die Landing Pages
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
 
-  const addReminder = (date, note) => {
-    setNewLocation({ ...newLocation, reminders: [...newLocation.reminders, { date, note }] });
-  };
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/landing-page-3":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/landing-page-4":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector('head > meta[name="description"]');
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
+  // Weitere Funktionen und Logik hier
 
   return (
-    <div>
-      <h1>Ortsverwaltung</h1>
-      {/* Formular zur Eingabe neuer Orte */}
-      <input type="text" placeholder="Name" onChange={e => setNewLocation({ ...newLocation, name: e.target.value })} />
-      <input type="number" placeholder="Latitude" onChange={e => setNewLocation({ ...newLocation, lat: e.target.value })} />
-      <input type="number" placeholder="Longitude" onChange={e => setNewLocation({ ...newLocation, lon: e.target.value })} />
-      <input type="text" placeholder="Notizen" onChange={e => setNewLocation({ ...newLocation, notes: e.target.value })} />
-      <button onClick={addLocation}>Ort hinzufügen</button>
-
-      {/* Erinnerungen hinzufügen */}
-      <input type="date" placeholder="Erinnerungsdatum" onChange={e => addReminder(e.target.value, 'Besuch diesen Ort wieder!')} />
-
-      {/* Kartenansicht */}
-      <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "400px", width: "100%" }}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {locations.map(location => (
-          <Marker key={location._id} position={[location.lat, location.lon]}>
-            <Popup>
-              {location.name}<br />{location.notes}
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
+    // Ihr JSX-Code hier
   );
 }
 

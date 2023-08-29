@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
+/*
+Die Komponenten Routes und Route werden aus "react-router-dom" importiert. Diese Komponenten werden verwendet, um die Routing-Struktur der Anwendung zu definieren.
+*/
+/*
+Diese Imports werden verwendet, um die Routing- und Navigationsstruktur für die Anwendung festzulegen.
+*/
+
+/*
+Die Hooks useNavigationType und useLocation werden ebenfalls aus "react-router-dom" importiert. Diese Hooks liefern Informationen über Navigationsaktionen und die aktuelle Position im Routing.
+*/
+
+
+
 function App() {
   const [locations, setLocations] = useState([]);
   const [newLocation, setNewLocation] = useState({ name: '', lat: 0, lon: 0, notes: '', reminders: [] });

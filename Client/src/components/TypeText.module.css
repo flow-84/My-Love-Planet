@@ -1,0 +1,23 @@
+.text,
+.typetext {
+  position: relative;
+}
+.text {
+  letter-spacing: -0.02em;
+  line-height: 22px;
+}
+.typetext {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--secondary);
+  box-sizing: border-box;
+  width: 172px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--body-size);
+  color: var(--primary);
+  font-family: var(--body);
+}

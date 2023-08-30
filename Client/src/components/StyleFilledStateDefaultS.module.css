@@ -1,0 +1,22 @@
+.label {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+}
+.stylefilledStatedefaultS {
+  position: relative;
+  background-color: var(--true-gray);
+  width: 120px;
+  height: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--body-size);
+  color: var(--white);
+  font-family: var(--button);
+}

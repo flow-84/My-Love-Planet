@@ -1,0 +1,31 @@
+.plusCircleIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.buttonLabel {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 22px;
+  font-weight: 600;
+}
+.sizeregularTypeprimarySt {
+  position: relative;
+  border-radius: var(--br-7xs);
+  background-color: var(--primary);
+  height: 48px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-base);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  text-align: left;
+  font-size: var(--body-size);
+  color: var(--white);
+  font-family: var(--body);
+}

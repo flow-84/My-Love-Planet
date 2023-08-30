@@ -1,0 +1,52 @@
+.containerFrDieListe1 {
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.listeDerBesuchten {
+  position: absolute;
+  height: 3.55%;
+  width: 53.96%;
+  top: 1.6%;
+  left: 23.79%;
+  line-height: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lissabon {
+  margin-bottom: 10px;
+}
+.lissabonNeapelImperiaNizza {
+  margin: 0;
+  padding-left: var(--padding-13xl);
+}
+.lissabonNeapelImperiaContainer {
+  position: absolute;
+  height: 78.83%;
+  width: 82.1%;
+  top: 9.15%;
+  left: 7.93%;
+  font-size: var(--font-inherit);
+  line-height: 24px;
+  font-family: var(--font-inherit);
+  text-align: left;
+  display: inline-block;
+}
+.containerFrDieListe {
+  position: absolute;
+  top: 56px;
+  left: 38px;
+  width: 391px;
+  height: 874px;
+  text-align: center;
+  font-size: var(--body-size);
+  color: var(--color-black);
+  font-family: var(--button);
+}

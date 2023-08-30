@@ -1,0 +1,115 @@
+.div {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.frame {
+  width: 1110px;
+  height: 26px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle {
+  position: relative;
+  background-color: var(--color-lightgray-100);
+  width: 1110px;
+  height: 1px;
+}
+.home {
+  position: relative;
+  line-height: 24px;
+}
+.frame4 {
+  width: 245px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+}
+.iconsocialinstagramCopy4 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.frame3 {
+  width: 926px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-646xl);
+}
+.frame2,
+.frame3,
+.frameIcon {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frameIcon {
+  position: relative;
+  width: 154px;
+  height: 16px;
+}
+.frame2 {
+  width: 1110px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.footer1,
+.frame1 {
+  display: flex;
+  flex-direction: column;
+}
+.frame1 {
+  width: 1110px;
+  height: 45px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  color: var(--colour-main-grey-700);
+}
+.footer1 {
+  background-color: var(--color-whitesmoke-100);
+  width: 1440px;
+  height: 216px;
+  padding: var(--padding-48xl) var(--padding-146xl) var(--padding-13xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--gap-27xl);
+}
+.logolandie {
+  position: relative;
+  width: 79px;
+  height: 38px;
+  margin-top: -155px;
+}
+.footer {
+  position: absolute;
+  top: 2389px;
+  left: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+  font-size: var(--body-small-size);
+  color: var(--colour-main-grey-400);
+  font-family: var(--bold-26);
+}

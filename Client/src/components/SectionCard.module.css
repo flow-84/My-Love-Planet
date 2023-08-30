@@ -1,0 +1,37 @@
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.openstreetmap {
+  margin: 0;
+  position: absolute;
+  top: 56px;
+  left: 470px;
+  border-radius: var(--br-xl);
+  width: 894px;
+  height: 874px;
+  background-image: url(/public/openstreetmap@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  opacity: 1;
+}
+.openstreetmap.animate {
+  animation: 1s ease 0s 1 normal forwards scale-up;
+}
+.containerFrDieListeParent {
+  position: absolute;
+  top: 390px;
+  left: 39px;
+  width: 1384px;
+  height: 953px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--body-size);
+  color: var(--color-black);
+  font-family: var(--button);
+}
